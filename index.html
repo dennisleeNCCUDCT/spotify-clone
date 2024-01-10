@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Spotify for Artist Index Clone</title>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+      function App() {
+        return (
+          <div className="flex flex-col min-h-screen">
+            <div className="flex-grow">
+              <div className="flex">
+                <div className="w-3/4 p-8">
+                  <div className="mb-6">
+                    <h1 className="text-6xl font-bold mb-4">Spotify for artist index clone</h1>
+                    <p className="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-6">
+                    {Array.from({ length: 8 }).map((_, index) => (
+                      <div key={index} className={`bg-gray-${index % 2 === 0 ? '800' : '700'} p-6 rounded-lg shadow-lg`}>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8NyRwCZVdBo-rWog2rXJzKzK2fi3BqKGVhA&usqp=CAU" alt="Music related image" className="mb-4 rounded-lg" />
+                        <h2 className="text-xl font-semibold mb-2 text-white">新聞標題示例</h2>
+                        <p className="text-sm mb-4 text-gray-300">新聞摘要示例，這裡是新聞內容的簡短描述。</p>
+                        <a href="#" className="text-blue-500 text-sm">閱讀更多 ></a>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="w-1/4 bg-gray-900 p-8 text-white">
+                  <div className="mb-6">
+                    <h2 className="text-xl font-semibold mb-4">最新文章</h2>
+                    <div className="text-sm">
+                      <p>連結</p>
+                      <p>連結</p>
+                      <p>連結</p>
+                      <p>連結</p>
+                    </div>
+                  </div>
+                  <div className="mb-6">
+                    <h2 className="text-xl font-semibold mb-4">分類目錄</h2>
+                    <div className="text-sm">
+                      <p>分類</p>
+                      <p>分類</p>
+                    </div>
+                  </div>
+                  <div className="mb-6">
+                    <h2 className="text-xl font-semibold mb-4">歸檔</h2>
+                    <div className="text-sm">
+                      <p>月份</p>
+                      <p>月份</p>
+                    </div>
+                  </div>
+                  <div>
+                    <h2 className="text-xl font-semibold mb-4">功能</h2>
+                    <div className="text-sm">
+                      <p>登錄</p>
+                      <p>文章RSS</p>
+                      <p>評論RSS</p>
+                      <p>WordPress.org</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <footer className="bg-gray-800 p-4 text-white text-center">
+              <div className="flex justify-center items-center mb-2">
+                <a href="https://www.instagram.com" target="_blank" className="mx-2">
+                  <i className="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="https://www.facebook.com" target="_blank" className="mx-2">
+                  <i className="fab fa-facebook fa-2x"></i>
+                </a>
+              </div>
+              <p>這是spotify for artist首頁的複製品。</p>
+            </footer>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById('app'));
+    </script>
+  </body>
+</html>
